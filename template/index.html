@@ -1,0 +1,1075 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="{% static 'img/toplogo.png' %}" type="image/x-icon">
+
+    <title>HeartCare/Home</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .top-bar {
+            width: 100%;
+            clear: both;
+            background-color: #b4b4b4;
+        }
+        
+        .top-bar a {
+            text-decoration: none;
+            color: #1f1f1f;
+        }
+        
+        .top-bar a:hover {
+            color: rgb(0, 183, 255);
+        }
+        
+        .top-bar ul {
+            margin: 0px 150px;
+            padding: 0px;
+            /* border: 2px solid red; */
+            list-style: none;
+        }
+        
+        .top-bar li {
+            display: inline-block;
+            line-height: 40px;
+            color: #000000;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            margin-right: 10px;
+        }
+        
+        .top-bar li .fa {
+            color: #f00612;
+        }
+        /* ***********login signup css */
+        
+        .log {
+            /* border: 2px solid red; */
+            display: flex;
+            height: 40px;
+            width: 239px;
+            margin-left: 561px;
+            float: right;
+        }
+        
+        .log .login button {
+            height: 38px;
+            border: none;
+            width: 86px;
+            border-radius: 20px;
+            color: #ffffff;
+            background-color: #ff0000;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 0 18px;
+            font-weight: 700;
+        }
+        
+        .log .signup button {
+            height: 38px;
+            border: none;
+            width: 86px;
+            border-radius: 20px;
+            color: #ffffff;
+            background-color: #ff0000;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 0 18px;
+            font-weight: 700;
+        }
+        
+        .log .signup button:hover {
+            background-color: #07c5ff;
+        }
+        
+        .log .login button:hover {
+            background-color: #07c5ff;
+        }
+        /* ***********login signup css  end */
+        /* ############ */
+        
+        .nav1 {
+            display: flex;
+            /* border: 2px solid green; */
+            text-align: center;
+            justify-content: center;
+            height: 100px;
+        }
+        
+        .nav1 img {
+            /* border: 2px solid yellow; */
+            margin-top: 26px;
+            height: 41px;
+        }
+        
+        .nav1 li {
+            list-style: none;
+            /* border: 2px solid rgb(218, 255, 10); */
+            padding: 24px 0px;
+            margin: 0 30px;
+            font-size: 35px;
+            font-weight: 861px;
+            color: black;
+        }
+        
+        .nav1 li a {
+            text-decoration: none;
+            /* border: 2px solid rgb(255, 14, 54); */
+            color: #474646;
+            font-size: 24px;
+            padding: 2px;
+        }
+        
+        #butt {
+            background-color: #f00612;
+            color: rgb(9, 19, 27);
+            font-size: 20px;
+            border-radius: 30px;
+            margin-left: 70px;
+            height: 35px;
+            width: 150px;
+            padding: 0px 0;
+            margin-top: 31px;
+            border: none;
+        }
+        
+        #butt a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        
+        .nav1 li a:hover {
+            background-color: #ff3838;
+            border-radius: 10px;
+            /* opacity: 0.1; */
+            color: #fdfdfd;
+        }
+        /* ****************top end*********************************** */
+        /* ************************************************************** */
+        /* slide start */
+        
+        .slide {
+            /* background-image: url("news2.png"); */
+            height: 466px;
+            /* width: 300px; */
+            background-image: url("/static/img/heart-1133761.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .slide #h1 {
+            color: white;
+            font-size: 60px;
+        }
+        
+        .slide #h5 {
+            color: white;
+            font-size: 33px;
+        }
+        
+        .slide .btn {
+            background-color: #f00612;
+            height: 40px;
+            width: 180px;
+            border: none;
+            margin: 0 18px;
+            /* margin-top: 230px; */
+            border-radius: 20px;
+            font-size: 20px;
+        }
+        
+        .slide .btn:hover {
+            background-color: #940007;
+        }
+        
+        .slide .btn a {
+            text-decoration: none;
+            color: white;
+        }
+        /* welcome section */
+        
+        .welcome-section {
+            height: 580px;
+            /* border: 2px solid blue; */
+            width: 80%;
+            text-align: center;
+            padding-top: 20px;
+            justify-content: center;
+            margin: auto;
+        }
+        
+        .welcome-section .welcome-box {
+            /* border: 2px solid red; */
+            height: 540px;
+            width: 45%;
+            padding-right: 28px;
+            margin-right: 59px;
+            float: left;
+            text-align: center;
+            text-align: left;
+            font-size: 20px;
+            color: #474646;
+        }
+        
+        .welcome-section .welcome-box .sectio-title-2 strong {
+            color: rgb(236, 81, 70);
+            font-size: 20px;
+        }
+        
+        .welcome-section .welcome-box .sectio-title-2 h2 {
+            color: #4b4b4b;
+            margin-top: 9px;
+            font-size: 42px;
+        }
+        
+        .welcome-section .welcome-box .signature {
+            color: #414342;
+            font-family: cursive;
+            font-size: 31px;
+            font-style: italic;
+        }
+        
+        .welcome-section .welcome-box .designation {
+            color: #f22020;
+            font-size: 16px;
+            line-height: 56px;
+        }
+        
+        .welcome-section .welcome-img {
+            /* border: 2px solid rgb(89, 0, 255); */
+            height: 540px;
+            width: 45%;
+            float: left;
+            padding-left: 26px;
+            text-align: center;
+        }
+        
+        .welcome-section .welcome-img img {
+            height: 495px;
+            width: 515px;
+        }
+        /* welcome section end */
+        /* helpbox start */
+        
+        .help {
+            /* border: 2px solid rgb(0, 0, 0); */
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            height: 275px;
+            width: 80%;
+        }
+        
+        .help-section h4 {
+            font-size: 20px;
+            line-height: 35px;
+        }
+        
+        .help-section {
+            display: flex;
+        }
+        
+        .help-section a {
+            text-decoration: none;
+            color: rgb(240 136 136);
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .help-card:hover {
+            /* border: 5px solid black; */
+            background: linear-gradient( 168deg, #00f128, transparent);
+        }
+        
+        .help-card {
+            height: 170px;
+            margin: 10px;
+            text-align: left;
+            padding: 0 8px;
+            background: linear-gradient( 168deg, #5178e6, transparent);
+            line-height: 21px;
+            width: 254px;
+        }
+        
+        .help-border {
+            border: 2px solid rgb(178 250 178);
+            height: 190px;
+            margin: 0 45px;
+            text-align: left;
+            width: 290px;
+        }
+        /* department section start */
+        
+        .department {
+            /* border: 2px solid rgb(0, 0, 0); */
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            height: 850px;
+            width: 80%;
+        }
+        
+        .department .heading {
+            font: 800;
+            font-size: 40px;
+            color: #203e43;
+            text-decoration: underline silver;
+        }
+        
+        .card-section {
+            display: flex;
+        }
+        
+        .card {
+            /* border: 2px solid rgb(25, 235, 6); */
+            height: 270px;
+            margin: 0 45px;
+            text-align: left;
+            width: 210px;
+        }
+        
+        .card a {
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .card a:hover {
+            color: #5178e6;
+        }
+        
+        .card p {
+            color: #b4b4b4;
+        }
+        
+        .card h4 {
+            font-size: 20px;
+            line-height: 35px;
+        }
+        
+        .card img {
+            border: 1.5px solid rgb(143, 143, 143);
+            height: 125px;
+            width: 190px;
+            margin: 8px;
+        }
+        /* department card section end */
+        /* ****************************************################### */
+        /* services section start */
+        
+        .services {
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            background-image: url("/static/img/chemical.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 500px;
+            /* width: 80%; */
+        }
+        
+        .services .services-heading {
+            font: 800;
+            font-size: 40px;
+            color: #203e43;
+            display: block;
+            text-decoration: underline silver;
+        }
+        
+        .services .services-heading h5 {
+            color: #f43d4e;
+            font-size: 20px;
+        }
+        
+        .service-content {
+            display: flex;
+            height: 368px;
+            justify-content: center;
+        }
+        
+        .services .services-items {
+            height: 300px;
+            width: 300px;
+            margin: 36px 103px;
+            text-align: left;
+            font-size: 20px;
+        }
+        
+        .services .services-items li {
+            list-style: none;
+            height: 26px;
+            font-size: 15px;
+            font-weight: boldpx;
+            margin: 4px 9px;
+            background-color: #eeeeee;
+            padding-top: 8px;
+        }
+        
+        .services .services-items li:hover {
+            background-color: #ffd5cb;
+        }
+        
+        .services .services-items li a {
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: rgb(255 0 0);
+            margin: 0 12px;
+        }
+        
+        .services .services-items .fa {
+            color: rgb(255 0 0);
+            margin: 0px 12px;
+            padding: 0 0;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        
+        .service-para {
+            height: 318px;
+            width: 600px;
+            margin: 36px;
+            text-align: left;
+        }
+        
+        .service-para h4 {
+            font-size: 45px;
+            color: #474545;
+        }
+        
+        .service-para .fa {
+            font-size: 100px;
+            color: white;
+            margin-right: 39px;
+        }
+        
+        .service-para h6 {
+            color: #000000;
+        }
+        
+        .x {
+            margin: 0 0px;
+            display: flex;
+            font-size: 27px;
+        }
+        
+        .checkbox {
+            line-height: 1.3;
+        }
+        
+        .checkbox li .fa {
+            font-size: 12px;
+            margin: 0 5px;
+        }
+        
+        .checkbox li {
+            list-style: none;
+            margin: 3px 50px;
+        }
+        /* services section end */
+        /* ********************************************************************* */
+        /* team section expert team */
+        
+        .team {
+            width: 80%;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            height: 420px;
+        }
+        
+        .team .team-heading {
+            font: 800;
+            font-size: 40px;
+            color: #203e43;
+            display: block;
+            text-decoration: underline silver;
+        }
+        
+        .team .team-heading h5 {
+            color: #f43d4e;
+            font-size: 20px;
+        }
+        
+        .team-card {
+            height: 300px;
+            width: 100%;
+            padding: 0 0px;
+            justify-content: center;
+            display: flex;
+        }
+        
+        .team .team-card .t-card {
+            height: 250px;
+            width: 214px;
+            margin: 30px 92px;
+        }
+        
+        .team .team-card .t-card img {
+            border-radius: 148px;
+            height: 172px;
+            width: 174px;
+        }
+        
+        .team .team-card .t-card img:hover {
+            background-color: #00f128;
+            border: 2px solid silver;
+        }
+        
+        .team-card .t-card a {
+            text-decoration: none;
+            color: #3c3d3c;
+            cursor: pointer;
+        }
+        
+        .team-card .t-card a:hover {
+            color: rgb(18, 144, 247);
+            cursor: pointer;
+        }
+        
+        .team-card a h3 {
+            font-size: 20px;
+        }
+        
+        .team-card a h6 {
+            margin-top: 6px;
+            font-size: 16px;
+        }
+        /* team section end expert section end */
+        /* contact section start */
+        
+        .contact-section {
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            display: inline-flex;
+            height: 400px;
+            width: 99.7%;
+            background-color: #706c6c;
+        }
+        
+        .contact-section a {
+            text-decoration: none;
+        }
+        
+        .contact-card img {
+            height: 80px;
+            width: 288px;
+            margin-top: 22px;
+        }
+        
+        .contact-card {
+            height: 340px;
+            width: 295px;
+            /* border: 4px solid; */
+            text-align: left;
+            line-height: 34px;
+            color: white;
+            margin: 20px 29px;
+        }
+        
+        .contact-card h4 {
+            color: #e1e2e1;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 9px 9px;
+        }
+        
+        .service-names {
+            /* border: 2px solid red; */
+            width: 220px;
+            font-size: 25px;
+            margin-left: 25px;
+        }
+        
+        .service-names a {
+            text-decoration: none;
+            color: rgb(209, 209, 209);
+        }
+        
+        .service-names li {
+            list-style: none;
+        }
+        
+        .service-names .fa {
+            margin: 0 8px;
+            /* border: 2px solid whitesmoke; */
+        }
+        
+        .dr-names {
+            /* border: 2px solid red; */
+            width: 265px;
+            font-size: 25px;
+            margin-left: 18px;
+        }
+        
+        .dr-names a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .dr-names li {
+            list-style: none;
+        }
+        
+        .dr-names .fa {
+            margin: 0 8px;
+            /* border: 2px solid whitesmoke; */
+        }
+        
+        .location {
+            /* border: 2px solid red; */
+            width: 301px;
+            font-size: 19px;
+            margin-left: 0px;
+        }
+        
+        .location a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .location li {
+            list-style: none;
+        }
+        
+        .location .fa {
+            margin: 0 8px;
+            color: red;
+            /* border: 2px solid whitesmoke; */
+        }
+        
+        .location .loc-data {
+            /* border: 4px solid yellow; */
+            margin: 0 42px;
+        }
+        
+        .contact-section a:hover {
+            color: rgb(0, 183, 255);
+        }
+        /* contact section end */
+        /* ************************************** ***********/
+        /* copyriight section start */
+        
+        .copyright {
+            text-align: center;
+            height: 38px;
+            width: 100%;
+            font-size: 23px;
+            padding-top: 3px;
+            color: white;
+            background-color: rgb(32, 32, 32);
+        }
+        /* copyriight section end */
+    </style>
+    {% load static %}
+
+</head>
+
+<body>
+    <div>
+        <nav class="top-bar">
+            <ul>
+                <li><i class="fa fa-phone" aria-hidden="true"></i> Call at: <strong><a href="#">+917470889818
+                        </a></strong></li>
+                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> Email us: <strong> <a href="#">
+                            info@heartcare.com</a></strong>
+                </li>
+                <!-- login and signup code  start-->
+                <span class="log">
+                    <li class="login"><a href="signinpage"><button>Login</button></a></li>
+                    <li class="signup"> <a href="signuppage"><button>Signup</button></a></li>
+                </span>
+                <!-- login and signup code  end-->
+            </ul>
+        </nav>
+    </div>
+    <nav class="nav-bar">
+        <ul class="nav1">
+            <img src="  {% static 'img/logo.png' %}" alt="">
+
+            <li><a href="home"> Home </a></li>
+            <li><a href="services"> Services </a></li>
+            <li><a href="doctor"> Doctors </a></li>
+            <li>
+                <a href="#"> </a>
+            </li>
+            <li><a href="contact"> Contact </a></li>
+            <button id="butt"><a href="appointment"> Appointment </a></button>
+            <li>
+                <a href=" #"> <i class="fa fa-bars" aria-hidden="true"></i> </a>
+            </li>
+
+
+
+
+
+
+        </ul>
+    </nav>
+
+    <section class="slide">
+        <div class="section">
+            <br>
+            <br><br><br> <br><br><br>
+            <h1 id="h1">Efficient Affordable High Quality Heart Care</h1>
+            <h5 id="h5">Our Treatments & Services are Provided Comfortable</h5>
+            <br><br>
+            <button class="btn"><a href="contact"> Call for Inquiry</a></button>
+            <button class="btn"><a href="doctor"> Ask Cardiologist</a></button>
+        </div>
+    </section>
+
+    <br><br><br>
+
+    <section class="welcome-section">
+        <section class="welcome-box">
+
+
+            <div class="sectio-title-2"> <strong>Welcome to your</strong>
+                <h2>Heart Care</h2>
+            </div>
+            <br>
+            <p> The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors consectetur adipisicing elit. Distinctio vitae maiores enim ea atque? Natus iure autem cumque, quaerat distinctio pariatur velit illo hic a
+                eos accusamus deleniti totam repellendus reiciendis, nobis vero dolorem nesciunt officia facere perspiciatis fugiat.</p>
+            <br>
+            <p>Sapiente accusamus repudiandae architecto corporis aspernatur. Eligendi, accusamus quas mollitia. Natus iure autem cumque, quaerat distinctio pariatur velit illo hic a eos accusamus deleniti totam repellendus reiciendis, nobis vero dolorem
+                nesciunt officia facere perspiciatis fugiat.</p>
+            <br>
+            <strong class="signature">Sonali sharma</strong>
+            <h6 class="designation">Heart Care Hospital</h6>
+        </section>
+        <section class="welcome-img">
+            <img src="{% static 'img/sec2.png' %}" alt="error">
+        </section>
+
+        </div>
+    </section>
+
+    <section class="help ">
+
+        <div class="help-section ">
+            <div class="help-border ">
+                <div class="help-card ">
+
+                    <div class="container ">
+                        <h4><b> CARDIO MONITORING</b></h4>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <a href="# ">GET FREE Appointment</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-border ">
+                <div class="help-card ">
+
+                    <div class="container ">
+                        <h4><b> FIRST AID</b></h4>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <a href="# ">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="help-border ">
+                <div class="help-card ">
+
+                    <div class="container ">
+                        <h4><b> EMERGENCY HELP</b></h4>
+
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <a href="# ">CALLFOR INFO: +917470889818</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr><br><br>
+    <!-- Department section start -->
+    <section class="department ">
+        <div class="heading ">
+            <h3> DEPARTMENTAL SERVICES</h3> <br><br>
+        </div>
+
+        <div class="card-section ">
+
+            <div class="card ">
+                <a href="# "> <img src="{% static 'img/expert-ser-1.jpg' %} " alt="Avatar ">
+                    <div class="container ">
+                        <h4><b>Angioplasty</b></h4>
+                </a>
+                <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors. It …</p>
+                </div>
+            </div>
+
+            <div class="card ">
+                <a href="# "> <img src=" {% static 'img/expert-ser-2.jpg' %}" alt="Avatar ">
+                    <div class="container ">
+                        <h4><b>ECG</b></h4>
+                </a>
+                <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors. It …
+                </p>
+                </div>
+            </div>
+
+            <div class="card ">
+                <a href="# "> <img src=" {% static 'img/expert-ser-3.jpg' %} " alt="Avatar ">
+                    <div class="container ">
+                        <h4><b>Echocardiogram</b></h4>
+                </a>
+                <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors. It …
+                </p>
+                </div>
+            </div>
+
+            <div class="card ">
+                <a href="# "> <img src=" {% static 'img/expert-ser-4.jpg' %}" alt="Avatar ">
+                    <div class="container ">
+                        <h4><b>Stress ECG</b></h4>
+                </a>
+                <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors. It …
+                </p>
+                </div>
+            </div>
+
+
+        </div>
+        <br><br><br>
+        <div class="card-section ">
+
+            <div class="card ">
+                <a href="# "> <img src=" {% static 'img/expert-ser-5.jpg' %}" alt="Avatar ">
+                    <div class="container ">
+                        <h4><b>Angiography</b></h4>
+                </a>
+                <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors. It …</p>
+                </div>
+            </div>
+
+            <div class="card ">
+                <a href="# "> <img src=" {% static 'img/expert-ser-6.jpg' %}" alt="Avatar ">
+                    <div class="container ">
+                        <h4><b>
+                            24 Hr Holter</b></h4>
+                </a>
+                <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors. It …
+                </p>
+                </div>
+            </div>
+
+            <div class="card ">
+                <a href="# "> <img src=" {% static 'img/expert-ser-7.jpg' %}" alt="Avatar ">
+
+                    <div class="container ">
+                        <h4><b>
+                            Pacemaker Check</b></h4>
+                </a>
+                <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors. It …
+                </p>
+                </div>
+            </div>
+
+            <div class="card ">
+                <a href="# "> <img src=" {% static 'img/expert-ser-8.jpg' %}" alt="Avatar ">
+                    <div class="container ">
+                        <h4><b> Cardiac Surgery</b></h4>
+                </a>
+                <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors. It …
+                </p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- services section start -->
+
+    <section class="services ">
+        <div class="services-heading ">
+            <h5>Our Core</h5>
+            <h3>Expert Services</h3>
+        </div>
+        <br><br>
+        <div class="service-content ">
+            <ul class="services-items ">
+
+                <li class="services-li "><a href="# "><i class="fa fa-graduation-cap " aria-hidden="true "></i> EXPERIRNCED
+                        SURGEONS</a></li>
+                <li class="services-li "><a href="# "><i class="fa fa-medkit " aria-hidden="true "></i> SPECIAL
+                        TREATMENTS</a>
+                </li>
+                <li class="services-li "><a href="# "><i class="fa fa-bed " aria-hidden="true "></i> COMFORT ENVIRONMENT</a>
+                </li>
+                <li class="services-li "><a href="# "><i class="fa fa-heartbeat " aria-hidden="true "></i> TALENTED
+                        CARDIOLOGIST</a></li>
+                <li class="services-li "><a href="# "><i class="fa fa-plus-circle " aria-hidden="true "></i> HIGH TECH
+                        EQUIPMENTS</a></li>
+                <li class="services-li "><a href="# "><i class="fa fa-umbrella " aria-hidden="true "></i> PERSONALIZED
+                        CARE</a>
+                </li>
+            </ul>
+            <div class="service-para ">
+                <h4>Experienced Surgeons</h4>
+                <br>
+                <div class="x ">
+                    <span><i class="fa fa-graduation-cap " aria-hidden="true "></i></span>
+                    <h6>Ut finibus sem in erat pretium, ultrices semper lorem aliquet. Nulla ultricies sagittis tellus at elementum. Cras consectetur congue diam nec imperdiet. Phasellus accumsan faucibus lectus.
+                    </h6>
+                </div>
+                <br>
+                <ul class="checkbox ">
+                    <li><i class="fa fa-check " aria-hidden="true "></i>the Heart Care Heart Hospital have lates </li>
+                    <li><i class="fa fa-check " aria-hidden="true "></i>the Heart Care Heart Hospital have lates</li>
+                    <li> <i class="fa fa-check " aria-hidden="true "></i>the Heart Care Heart Hospital have lates</li>
+                    <li> <i class="fa fa-check " aria-hidden="true "></i>the Heart Care Heart Hospital have lates</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <br>
+
+    <section class="team ">
+        <div class="team-heading ">
+            <h5>Our Team</h5>
+            <h3> EXPERT TEAM</h3> <br>
+        </div>
+        <div class="team-card ">
+            <div class="t-card ">
+                <img src="{% static 'img/team8.jpg' %} " alt=" ">
+                <a href="# ">
+                    <h3>Dr. Dhand Hemlata</h3>
+                    <h6>Senior Cardiologist</h6>
+                </a>
+            </div>
+            <div class="t-card ">
+                <img src=" {% static 'img/team13.jpg' %}" alt=" ">
+                <a href="# ">
+                    <h3>Dr. Abbas Shahid</h3>
+                    <h6>Senior Cardiologist</h6>
+                </a>
+
+            </div>
+            <div class="t-card ">
+                <img src="{% static 'img/team14.jpg' %} " alt=" ">
+                <a href="# ">
+                    <h3>Dr. Admane Neelima</h3>
+                    <h6>Senior Cardiologist</h6>
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+    <hr>
+
+    <br>
+
+    <!-- ########################################################################################## -->
+
+    <!--################# contact section start############## -->
+
+    <section class="contact-section ">
+
+        <div class="contact-card ">
+
+            <div class="container ">
+                <img src="{% static 'img/logo.png' %}" alt=" " id="logo-img ">
+
+                <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors. It …
+
+            </div>
+        </div>
+
+        <div class="contact-card ">
+
+            <div class="container ">
+                <h4><b>OUR SERVICES</b></h4>
+
+                <ul class="service-names ">
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Angioplasty</a> </li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>ECG</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Echocardiogram</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Stress ECG</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Angiography</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>24 Hr Holter</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Pacemaker</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Cardiac Surgery</a></li>
+
+
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="contact-card ">
+
+            <div class="container ">
+                <h4><b>OUR DOCTORS</b></h4>
+
+                <ul class="dr-names ">
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Dr. Rohit chabra</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Dr. Abbas Shahid</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Dr. Abdul Malik</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Dr. Achraya Dilip</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Dr. Achraya Dinesh</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Dr. Admane Neelima</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Dr. Dhanuka Sanjay</a></li>
+                    <li><a href="# "><i class="fa fa-arrow-right " aria-hidden="true "></i>Dr. Dhand Hemlata</a></li>
+
+
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="contact-card ">
+
+            <div class="container ">
+                <h4><b>
+                        CONTACT US</b></h4>
+
+                <ul class="location ">
+                    <li>
+                        <a href="# "> <i class="fa fa-location-arrow " aria-hidden="true "></i></a> Main Branch : <br><span class="loc-data "><a href="# "> Xyz Square dewas mp</a> </span> </li>
+                    <li><a href="# "><i class="fa fa-phone " aria-hidden="true "></i></a>Call us Anytime at: <br> <span class="loc-data "><a href="# "> +917470889818 </a></span> </li>
+                    <li><a href="# "><i class="fa fa-envelope " aria-hidden="true "></i></a>For Inquiry: <br><span class="loc-data "><a href="# "> info@heartcare.com </a></span> </li>
+                    <li>
+                        <a href="# "> <i class="fa fa-clock-o " aria-hidden="true "></i></a>Our Timings: <br> <span class="loc-data "> Mon-Sat: 9:00am - 7:00pm  </span> </li>
+            </div>
+        </div>
+    </section>
+
+    <footer class="copyright ">
+        <div>HeartCare © 2021, All Rights Reserved, Design & Developed By Sonali sharma</div>
+    </footer>
+    <br>
+
+
+</body>
+
+</html>
